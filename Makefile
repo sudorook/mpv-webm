@@ -10,6 +10,7 @@ SOURCES += src/vp8_twopass_log_patcher.moon
 SOURCES += src/formats/base.moon
 SOURCES += src/formats/rawvideo.moon
 SOURCES += src/formats/webm.moon
+SOURCES += src/formats/webp.moon
 SOURCES += src/formats/avc.moon
 SOURCES += src/formats/av1.moon
 SOURCES += src/formats/hevc.moon

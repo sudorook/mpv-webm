@@ -78,7 +78,7 @@ get_video_dimensions = ->
 
 		align_y = mp.get_property_number("video-align-y")
 		pan_y = mp.get_property_number("video-pan-y")
-		_video_dimensions.top_left.y, _video_dimensions.bottom_right.y = split_scaling(window_h,  scaled_height, zoom, align_y, pan_y)
+		_video_dimensions.top_left.y, _video_dimensions.bottom_right.y = split_scaling(window_h, scaled_height, zoom, align_y, pan_y)
 	else
 		_video_dimensions.top_left.x = 0
 		_video_dimensions.bottom_right.x = window_w

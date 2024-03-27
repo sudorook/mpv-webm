@@ -218,3 +218,4 @@ reverse = (list) ->
 
 get_pass_logfile_path = (encode_out_path) ->
 	"#{encode_out_path}-video-pass1.log"
+

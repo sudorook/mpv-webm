@@ -53,3 +53,4 @@ class PreviewPage extends Page
 	cancel: =>
 		self\hide!
 		self.callback()
+

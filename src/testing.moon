@@ -8,3 +8,4 @@ test_set_options = (new_options_json) ->
         options[k] = v
 
 mp.register_script_message("mpv-webm-set-options", test_set_options)
+

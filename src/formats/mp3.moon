@@ -8,3 +8,4 @@ class MP3 extends Format
 		@acceptsBitrate = true
 
 formats["mp3"] = MP3!
+

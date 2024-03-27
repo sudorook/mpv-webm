@@ -438,3 +438,4 @@ encode = (region, startTime, endTime) ->
 		os.remove(get_pass_logfile_path(out_path))
 		if is_temporary
 			os.remove(path)
+

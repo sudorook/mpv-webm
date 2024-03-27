@@ -30,3 +30,4 @@ class RawVideo extends Format
 		{"format=yuv444p16", "lavfi-scale=in_color_matrix=" .. self\getColorspace!, "format=bgr24"}
 
 formats["raw"] = RawVideo!
+

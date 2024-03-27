@@ -116,3 +116,4 @@ vp8_patch_logfile = (logfile_path, encode_total_duration) ->
     stats_array[#stats_array]\set_duration(encode_total_duration)
     
     write_stats_array_to_logfile(stats_array, logfile_path)
+

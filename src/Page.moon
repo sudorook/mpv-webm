@@ -77,3 +77,4 @@ class Page
 		ass\append("{\\an7}")
 		ass\pos(margin, margin)
 		ass\append("{\\fs#{options.font_size * scale}}")
+

@@ -59,3 +59,4 @@ class GIF extends Format
 		return new_command
 
 formats["gif"] = GIF!
+

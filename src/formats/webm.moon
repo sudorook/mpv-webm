@@ -49,3 +49,4 @@ class WebmVP9 extends Format
 		}
 
 formats["webm-vp9"] = WebmVP9!
+

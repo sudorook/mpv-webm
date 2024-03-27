@@ -44,3 +44,4 @@ class EncodeWithProgress extends Page
 		if @finishedReason == "End of file"
 			return true
 		return false
+

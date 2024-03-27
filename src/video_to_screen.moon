@@ -169,3 +169,4 @@ make_fullscreen_region = () ->
 	b\set_from_screen(xb, yb)
 	r\set_from_points(a, b)
 	return r
+

@@ -13,3 +13,4 @@ class AV1 extends Format
 		}
 
 formats["av1"] = AV1!
+

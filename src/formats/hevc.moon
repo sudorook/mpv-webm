@@ -13,3 +13,4 @@ class HEVC extends Format
 		}
 
 formats["hevc"] = HEVC!
+

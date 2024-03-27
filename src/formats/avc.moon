@@ -29,3 +29,4 @@ class AVCNVENC extends Format
 		}
 
 formats["avc-nvenc"] = AVCNVENC!
+

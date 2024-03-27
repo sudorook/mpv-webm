@@ -85,3 +85,4 @@ class CropPage extends Page
 		width, height = math.abs(@pointA.x - @pointB.x), math.abs(@pointA.y - @pointB.y)
 		ass\append("#{bold('ENTER:')} confirm crop (#{width}x#{height})\\N")
 		mp.set_osd_ass(window.w, window.h, ass.text)
+

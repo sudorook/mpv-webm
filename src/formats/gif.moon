@@ -28,7 +28,7 @@ class GIF extends Format
 		for _, v in ipairs command
 			-- Other possible vf commands may be OK, but only convert fps, scale, crop, rotate and eq for now
 			if v\match("^%-%-vf%-add=lavfi%-scale") or v\match("^%-%-vf%-add=lavfi%-crop") or
-				   v\match("^%-%-vf%-add=fps") or v\match("^%-%-vf%-add=lavfi%-eq")
+					v\match("^%-%-vf%-add=fps") or v\match("^%-%-vf%-add=lavfi%-eq")
 				n = v\gsub("^%-%-vf%-add=", "")\gsub("^lavfi%-", "")
 				cfilter = cfilter .. "[vidtmp]#{n}[vidtmp];"
 			else if v\match("^%-%-video%-rotate=90")

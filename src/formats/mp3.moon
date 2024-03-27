@@ -1,5 +1,5 @@
 class MP3 extends Format
-    new: =>
+	new: =>
 		@displayName = "MP3 (libmp3lame)"
 		@supportsTwopass = false -- uhh
 		@videoCodec = ""

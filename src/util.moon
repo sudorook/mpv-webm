@@ -125,6 +125,7 @@ format_filename = (startTime, endTime, videoFormat) ->
 		"%%S": seconds_to_path_element(startTime, true)
 		"%%e": seconds_to_path_element(endTime)
 		"%%E": seconds_to_path_element(endTime, true)
+		"%%D": string.format("%s", os.date("%Y%m%d-%H%M%S"))
 		"%%T": mp.get_property("media-title")
 		"%%M": (mp.get_property_native('aid') and not mp.get_property_native('mute') and hasAudioCodec) and '-audio' or ''
 		"%%R": "-#{format_resolution(options.scale_height)}p"

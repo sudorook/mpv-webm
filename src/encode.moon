@@ -78,7 +78,14 @@ get_scale_filters = ->
 	if options.force_square_pixels
 		append(filters, {"lavfi-scale=iw*sar:ih"})
 	if options.scale_height > 0
-		append(filters, {"lavfi-scale=-2:#{options.scale_height}"})
+		aspect_ratio = mp.get_property_number("video-params/aspect")
+		if aspect_ratio > 1.7 then
+			adjusted_height = math.floor(options.scale_height / aspect_ratio * 16.0 / 9.0)
+			if (adjusted_height % 2) ~= 0
+				adjusted_height = adjusted_height + 1
+			append(filters, {"lavfi-scale=-2:#{adjusted_height}"})
+		else
+			append(filters, {"lavfi-scale=-2:#{options.scale_height}"})
 	return filters
 
 get_fps_filters = ->

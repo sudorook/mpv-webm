@@ -79,6 +79,22 @@ expand_properties = (text, magic="$") ->
 
 	return text
 
+format_resolution = (in_height) ->
+	resolution_value = -1
+	if in_height != -1 then
+		resolution_value = in_height
+	else
+		aspect_ratio = mp.get_property_number("video-params/aspect")
+		height = mp.get_property_number("height")
+		if aspect_ratio > 1.7 then
+			adjusted_height = math.floor(height * aspect_ratio / 16.0 * 9.0)
+			if (adjusted_height % 2) ~= 0
+				adjusted_height = adjusted_height + 1
+			resolution_value = adjusted_height
+		else
+			resolution_value = height
+	return resolution_value
+
 format_filename = (startTime, endTime, videoFormat) ->
 	hasAudioCodec = videoFormat.audioCodec != ""
 	replaceFirst =
@@ -111,7 +127,7 @@ format_filename = (startTime, endTime, videoFormat) ->
 		"%%E": seconds_to_path_element(endTime, true)
 		"%%T": mp.get_property("media-title")
 		"%%M": (mp.get_property_native('aid') and not mp.get_property_native('mute') and hasAudioCodec) and '-audio' or ''
-		"%%R": (options.scale_height != -1) and "-#{options.scale_height}p" or "-#{mp.get_property_native('height')}p"
+		"%%R": "-#{format_resolution(options.scale_height)}p"
 		"%%mb": options.target_filesize/1000
 		"%%t%%": "%%"
 	filename = options.output_template

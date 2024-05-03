@@ -1,6 +1,6 @@
 local options = {
-	-- Defaults to shift+w
-	keybind = "W",
+	-- Defaults to 'c'
+	keybind = "c",
 	-- If empty, saves on the same directory of the playing video.
 	-- A starting "~" will be replaced by the home dir.
 	-- This field is delimited by double-square-brackets - [[ and ]] - instead of
@@ -23,7 +23,7 @@ local options = {
 	-- %D - date of file creation
 	-- More specifiers are supported, see https://mpv.io/manual/master/#options-screenshot-template
 	-- Property expansion is supported (with %{} at top level, ${} when nested), see https://mpv.io/manual/master/#property-expansion
-	output_template = "%F-[%s-%e]%M",
+	output_template = "%F-[%s-%e]%R_%D",
 	-- Scale video to a certain height, keeping the aspect ratio. -1 disables it.
 	scale_height = -1,
 	-- Change the FPS of the output video, dropping or duplicating frames as needed.
@@ -53,7 +53,7 @@ local options = {
 	-- gif
 	-- mp3 (libmp3lame)
 	-- and raw (rawvideo/pcm_s16le).
-	output_format = "webm-vp8",
+	output_format = "avc",
 	twopass = true,
 	-- If set, applies the video filters currently used on the playback to the encode.
 	apply_current_filters = true,
